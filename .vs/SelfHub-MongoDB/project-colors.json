@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "233efef0-c381-47bd-a029-fc6701089344": {
+      "ProjectGuid": "233efef0-c381-47bd-a029-fc6701089344",
+      "DisplayName": "SelfHub-MongoDB",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
