@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "gmjKxbf1GP/oyybWitq0SwGrbficbStqc0k8MA7lK5rWHNOfyHv5H7MTw+aXhaioRQNNFXxCvfiG5O960qGdIw==",
+  "dgSpecHash": "ua55f57cMs/dOQURJs4VaB0vKBZEog1eWY1lCbIlmc1MM7zK9lXD18VC2MqvyIfR6XHKaysR+kD3CyOUEB9igg==",
   "success": true,
   "projectFilePath": "C:\\Users\\macho\\source\\repos\\SelfHub-MongoDB\\SelfHub-MongoDB\\SelfHub-MongoDB.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\macho\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
+    "C:\\Users\\macho\\.nuget\\packages\\mongodb.bson\\2.14.1\\mongodb.bson.2.14.1.nupkg.sha512",
+    "C:\\Users\\macho\\.nuget\\packages\\mongodb.driver\\2.14.1\\mongodb.driver.2.14.1.nupkg.sha512",
+    "C:\\Users\\macho\\.nuget\\packages\\mongodb.driver.core\\2.14.1\\mongodb.driver.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\macho\\.nuget\\packages\\mongodb.libmongocrypt\\1.3.0\\mongodb.libmongocrypt.1.3.0.nupkg.sha512",
+    "C:\\Users\\macho\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
+    "C:\\Users\\macho\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\macho\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
