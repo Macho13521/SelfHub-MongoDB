@@ -60,6 +60,14 @@
             this.aktualizacjaloginu = new System.Windows.Forms.TextBox();
             this.aktualizacjahasla = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.listadokumentow = new System.Windows.Forms.ListView();
+            this.Login = new System.Windows.Forms.ColumnHeader();
+            this.Haslo = new System.Windows.Forms.ColumnHeader();
+            this.Email = new System.Windows.Forms.ColumnHeader();
+            this.Wiek = new System.Windows.Forms.ColumnHeader();
+            this.wartosciszukane = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.poleszukane = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dodanywiek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aktualizacjawieku)).BeginInit();
             this.SuspendLayout();
@@ -333,11 +341,73 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // listadokumentow
+            // 
+            this.listadokumentow.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Login,
+            this.Haslo,
+            this.Email,
+            this.Wiek});
+            this.listadokumentow.Location = new System.Drawing.Point(398, 460);
+            this.listadokumentow.Name = "listadokumentow";
+            this.listadokumentow.Size = new System.Drawing.Size(482, 134);
+            this.listadokumentow.TabIndex = 40;
+            this.listadokumentow.UseCompatibleStateImageBehavior = false;
+            this.listadokumentow.View = System.Windows.Forms.View.Details;
+            // 
+            // Login
+            // 
+            this.Login.Text = "Login";
+            this.Login.Width = 120;
+            // 
+            // Haslo
+            // 
+            this.Haslo.Text = "Haslo";
+            this.Haslo.Width = 120;
+            // 
+            // Email
+            // 
+            this.Email.Text = "Email";
+            this.Email.Width = 120;
+            // 
+            // Wiek
+            // 
+            this.Wiek.Text = "Wiek";
+            this.Wiek.Width = 120;
+            // 
+            // wartosciszukane
+            // 
+            this.wartosciszukane.Location = new System.Drawing.Point(286, 502);
+            this.wartosciszukane.Name = "wartosciszukane";
+            this.wartosciszukane.Size = new System.Drawing.Size(100, 23);
+            this.wartosciszukane.TabIndex = 41;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(247, 531);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 42;
+            this.button6.Text = "Znajdź";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // poleszukane
+            // 
+            this.poleszukane.Location = new System.Drawing.Point(180, 502);
+            this.poleszukane.Name = "poleszukane";
+            this.poleszukane.Size = new System.Drawing.Size(100, 23);
+            this.poleszukane.TabIndex = 43;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(919, 627);
+            this.Controls.Add(this.poleszukane);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.wartosciszukane);
+            this.Controls.Add(this.listadokumentow);
             this.Controls.Add(this.aktualizacjawieku);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.aktualizacjaemaila);
@@ -413,5 +483,13 @@
         private TextBox aktualizacjaloginu;
         private TextBox aktualizacjahasla;
         private Button button5;
+        private ListView listadokumentow;
+        private ColumnHeader Login;
+        private ColumnHeader Haslo;
+        private ColumnHeader Email;
+        private ColumnHeader Wiek;
+        private TextBox wartosciszukane;
+        private Button button6;
+        private TextBox poleszukane;
     }
 }

@@ -1,3 +1,4 @@
+using MongoDB.Driver;
 using static SelfHub_MongoDB.Mongo;
 
 namespace SelfHub_MongoDB
@@ -60,6 +61,26 @@ namespace SelfHub_MongoDB
             };
 
             db.PodmieñDokument<U¿ytkownik>("Konta", "id", znalezioneID.Text, osoba);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            listadokumentow.Items.Clear();
+            Mongo db = new Mongo("SelfHub");
+
+            var filter = Builders<U¿ytkownik>.Filter.Eq(poleszukane.Text, wartosciszukane.Text);
+            var dokumenty = db.SzukajDokumentów<U¿ytkownik>("Konta", filter);
+
+            foreach (var dokument in dokumenty)
+            {
+                Console.WriteLine(dokument.Login + " " + dokument.Email);
+                ListViewItem linijka = new ListViewItem();
+                linijka.Text = dokument.Login;
+                linijka.SubItems.Add(dokument.Email);
+                linijka.SubItems.Add(dokument.Haslo);
+                linijka.SubItems.Add(dokument.Wiek.ToString());
+                listadokumentow.Items.Add(linijka);
+            }
         }
     }
 }

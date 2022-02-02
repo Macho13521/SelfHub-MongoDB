@@ -53,5 +53,17 @@ namespace SelfHub_MongoDB
             var filter = Builders<T>.Filter.Eq(Indeks, Wartość);
             kolekcja.ReplaceOne(filter, dane);
         }
+
+        public List<T> SzukajDokumentów<T>(string table, dynamic danefiltra)
+        {
+            var kolekcja = db.GetCollection<T>(table);
+            FilterDefinition<T> filter = danefiltra;
+            return kolekcja.Find(filter).ToList();
+        }
+        public List<T> WszystkieDokumenty<T>(string table)
+        {
+            var kolekcja = db.GetCollection<T>(table);
+            return kolekcja.Find(new BsonDocument()).ToList();
+        }
     }
 }
