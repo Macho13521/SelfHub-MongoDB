@@ -68,8 +68,19 @@
             this.wartosciszukane = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.poleszukane = new System.Windows.Forms.TextBox();
+            this.dodanewieki = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dodaneemaile = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dodaneloginy = new System.Windows.Forms.TextBox();
+            this.dodanehasla = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dodanywiek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aktualizacjawieku)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dodanewieki)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -399,11 +410,105 @@
             this.poleszukane.Size = new System.Drawing.Size(100, 23);
             this.poleszukane.TabIndex = 43;
             // 
+            // dodanewieki
+            // 
+            this.dodanewieki.Location = new System.Drawing.Point(389, 285);
+            this.dodanewieki.Name = "dodanewieki";
+            this.dodanewieki.Size = new System.Drawing.Size(100, 23);
+            this.dodanewieki.TabIndex = 52;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(309, 330);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 15);
+            this.label11.TabIndex = 51;
+            this.label11.Text = "Email";
+            // 
+            // dodaneemaile
+            // 
+            this.dodaneemaile.Location = new System.Drawing.Point(389, 327);
+            this.dodaneemaile.Name = "dodaneemaile";
+            this.dodaneemaile.Size = new System.Drawing.Size(100, 23);
+            this.dodaneemaile.TabIndex = 50;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(309, 285);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(36, 15);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "Wiek:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(309, 247);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 15);
+            this.label13.TabIndex = 48;
+            this.label13.Text = "Hasło";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(309, 205);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 15);
+            this.label14.TabIndex = 47;
+            this.label14.Text = "Login";
+            // 
+            // dodaneloginy
+            // 
+            this.dodaneloginy.Location = new System.Drawing.Point(389, 202);
+            this.dodaneloginy.Name = "dodaneloginy";
+            this.dodaneloginy.Size = new System.Drawing.Size(100, 23);
+            this.dodaneloginy.TabIndex = 46;
+            // 
+            // dodanehasla
+            // 
+            this.dodanehasla.Location = new System.Drawing.Point(389, 244);
+            this.dodanehasla.Name = "dodanehasla";
+            this.dodanehasla.Size = new System.Drawing.Size(100, 23);
+            this.dodanehasla.TabIndex = 45;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(309, 361);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 23);
+            this.button7.TabIndex = 44;
+            this.button7.Text = "Dodaj Wiele";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(415, 361);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 53;
+            this.button8.Text = "Zapisz";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 627);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.dodanewieki);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.dodaneemaile);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.dodaneloginy);
+            this.Controls.Add(this.dodanehasla);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.poleszukane);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.wartosciszukane);
@@ -444,6 +549,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dodanywiek)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aktualizacjawieku)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dodanewieki)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -491,5 +597,15 @@
         private TextBox wartosciszukane;
         private Button button6;
         private TextBox poleszukane;
+        private NumericUpDown dodanewieki;
+        private Label label11;
+        private TextBox dodaneemaile;
+        private Label label12;
+        private Label label13;
+        private Label label14;
+        private TextBox dodaneloginy;
+        private TextBox dodanehasla;
+        private Button button7;
+        private Button button8;
     }
 }

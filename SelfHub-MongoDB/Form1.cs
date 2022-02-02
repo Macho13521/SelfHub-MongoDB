@@ -100,5 +100,29 @@ namespace SelfHub_MongoDB
             }
 
         }
+
+        List<U퓓tkownik> dokumenty = new List<U퓓tkownik>();
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Mongo db = new Mongo("SelfHub");
+            db.DodajDokumenty("Konta",dokumenty);
+            dokumenty.Clear();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            U퓓tkownik osoba = new U퓓tkownik
+            {
+                Login = dodaneloginy.Text,
+                Haslo = dodanehasla.Text,
+                Email = dodaneemaile.Text,
+                Wiek = (int)dodanewieki.Value
+            };
+            dokumenty.Add(osoba);
+            dodaneloginy.Text = "";
+            dodanehasla.Text = "";
+            dodaneemaile.Text = "";
+            dodanewieki.Text = "";
+        }
     }
 }

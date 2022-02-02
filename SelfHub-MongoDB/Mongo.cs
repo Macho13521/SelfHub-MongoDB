@@ -54,16 +54,21 @@ namespace SelfHub_MongoDB
             kolekcja.ReplaceOne(filter, dane);
         }
 
-        public List<T> SzukajDokumentów<T>(string table, dynamic danefiltra)
+        public List<T> SzukajDokumentów<T>(string table, FilterDefinition<T> filter)
         {
             var kolekcja = db.GetCollection<T>(table);
-            FilterDefinition<T> filter = danefiltra;
             return kolekcja.Find(filter).ToList();
         }
         public List<T> WszystkieDokumenty<T>(string table)
         {
             var kolekcja = db.GetCollection<T>(table);
             return kolekcja.Find(new BsonDocument()).ToList();
+        }
+
+        public void DodajDokumenty<T>(string table, List<T> dokumenty)
+        {
+            var kolekcja = db.GetCollection<T>(table);
+            kolekcja.InsertMany(dokumenty);
         }
     }
 }
