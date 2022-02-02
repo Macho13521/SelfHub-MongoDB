@@ -45,5 +45,21 @@ namespace SelfHub_MongoDB
             Mongo db = new Mongo("SelfHub");
             db.UsuñDokument<U¿ytkownik>("Konta", "id", znalezioneID.Text);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Mongo db = new Mongo("SelfHub");
+
+            U¿ytkownik osoba = new U¿ytkownik
+            {
+                id = Guid.Parse(znalezioneID.Text),
+                Login = aktualizacjaloginu.Text,
+                Haslo = aktualizacjahasla.Text,
+                Email = aktualizacjaemaila.Text,
+                Wiek = (int)aktualizacjawieku.Value
+            };
+
+            db.PodmieñDokument<U¿ytkownik>("Konta", "id", znalezioneID.Text, osoba);
+        }
     }
 }

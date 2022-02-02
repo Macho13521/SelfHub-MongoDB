@@ -36,7 +36,7 @@ namespace SelfHub_MongoDB
         {
             var kolekcja = db.GetCollection<T>(table);
             var filter = Builders<T>.Filter.Eq(Indeks, Wartosc);
-            var aktualizacja = Builders<T>.Update.Set(indekskolumny, wartosc2);
+            var aktualizacja = Builders<T>.Update.Set(indekskolumny,wartosc2);
             kolekcja.UpdateOne(filter, aktualizacja);
         }
 
@@ -45,6 +45,13 @@ namespace SelfHub_MongoDB
             var kolekcja = db.GetCollection<T>(table);
             var filter = Builders<T>.Filter.Eq(Indeks, Wartosc);
             kolekcja.DeleteOne(filter);
+        }
+
+        public void PodmieńDokument<T>(string table, string Indeks, string Wartość, T dane)
+        {
+            var kolekcja = db.GetCollection<T>(table);
+            var filter = Builders<T>.Filter.Eq(Indeks, Wartość);
+            kolekcja.ReplaceOne(filter, dane);
         }
     }
 }
