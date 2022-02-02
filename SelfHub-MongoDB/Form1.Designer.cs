@@ -83,6 +83,17 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.szukaneaktualizacjewartosci = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.szukaneaktualizacjepola = new System.Windows.Forms.TextBox();
+            this.aktualizacjewartosci = new System.Windows.Forms.TextBox();
+            this.aktualizacjepolek = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dodanywiek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aktualizacjawieku)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodanewieki)).BeginInit();
@@ -215,14 +226,14 @@
             // 
             // aktualizowanepole
             // 
-            this.aktualizowanepole.Location = new System.Drawing.Point(545, 201);
+            this.aktualizowanepole.Location = new System.Drawing.Point(535, 201);
             this.aktualizowanepole.Name = "aktualizowanepole";
             this.aktualizowanepole.Size = new System.Drawing.Size(100, 23);
             this.aktualizowanepole.TabIndex = 16;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(613, 241);
+            this.button3.Location = new System.Drawing.Point(603, 241);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 24;
@@ -232,7 +243,7 @@
             // 
             // aktualizowanawartosc
             // 
-            this.aktualizowanawartosc.Location = new System.Drawing.Point(651, 201);
+            this.aktualizowanawartosc.Location = new System.Drawing.Point(641, 201);
             this.aktualizowanawartosc.Name = "aktualizowanawartosc";
             this.aktualizowanawartosc.Size = new System.Drawing.Size(100, 23);
             this.aktualizowanawartosc.TabIndex = 25;
@@ -541,11 +552,114 @@
             this.label16.TabIndex = 57;
             this.label16.Text = "Pole";
             // 
+            // szukaneaktualizacjewartosci
+            // 
+            this.szukaneaktualizacjewartosci.Location = new System.Drawing.Point(932, 26);
+            this.szukaneaktualizacjewartosci.Name = "szukaneaktualizacjewartosci";
+            this.szukaneaktualizacjewartosci.Size = new System.Drawing.Size(100, 23);
+            this.szukaneaktualizacjewartosci.TabIndex = 61;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(879, 114);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(101, 23);
+            this.button10.TabIndex = 60;
+            this.button10.Text = "AktualizujWiele";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // szukaneaktualizacjepola
+            // 
+            this.szukaneaktualizacjepola.Location = new System.Drawing.Point(826, 26);
+            this.szukaneaktualizacjepola.Name = "szukaneaktualizacjepola";
+            this.szukaneaktualizacjepola.Size = new System.Drawing.Size(100, 23);
+            this.szukaneaktualizacjepola.TabIndex = 59;
+            // 
+            // aktualizacjewartosci
+            // 
+            this.aktualizacjewartosci.Location = new System.Drawing.Point(932, 83);
+            this.aktualizacjewartosci.Name = "aktualizacjewartosci";
+            this.aktualizacjewartosci.Size = new System.Drawing.Size(100, 23);
+            this.aktualizacjewartosci.TabIndex = 63;
+            // 
+            // aktualizacjepolek
+            // 
+            this.aktualizacjepolek.Location = new System.Drawing.Point(826, 83);
+            this.aktualizacjepolek.Name = "aktualizacjepolek";
+            this.aktualizacjepolek.Size = new System.Drawing.Size(100, 23);
+            this.aktualizacjepolek.TabIndex = 62;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(961, 8);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(50, 15);
+            this.label17.TabIndex = 65;
+            this.label17.Text = "Wartość";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(860, 8);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(30, 15);
+            this.label18.TabIndex = 64;
+            this.label18.Text = "Pole";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(961, 65);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 15);
+            this.label19.TabIndex = 67;
+            this.label19.Text = "Wartość";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(860, 65);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(30, 15);
+            this.label20.TabIndex = 66;
+            this.label20.Text = "Pole";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(770, 29);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(50, 15);
+            this.label21.TabIndex = 68;
+            this.label21.Text = "Szukane";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(750, 86);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(70, 15);
+            this.label22.TabIndex = 69;
+            this.label22.Text = "Aktualizacja";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 627);
+            this.ClientSize = new System.Drawing.Size(1054, 627);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.aktualizacjewartosci);
+            this.Controls.Add(this.aktualizacjepolek);
+            this.Controls.Add(this.szukaneaktualizacjewartosci);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.szukaneaktualizacjepola);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.button9);
@@ -664,5 +778,16 @@
         private Button button9;
         private Label label15;
         private Label label16;
+        private TextBox szukaneaktualizacjewartosci;
+        private Button button10;
+        private TextBox szukaneaktualizacjepola;
+        private TextBox aktualizacjewartosci;
+        private TextBox aktualizacjepolek;
+        private Label label17;
+        private Label label18;
+        private Label label19;
+        private Label label20;
+        private Label label21;
+        private Label label22;
     }
 }

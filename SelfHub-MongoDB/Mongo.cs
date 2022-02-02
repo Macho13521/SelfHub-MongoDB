@@ -47,10 +47,9 @@ namespace SelfHub_MongoDB
             kolekcja.DeleteOne(filter);
         }
 
-        public void PodmieńDokument<T>(string table, string Indeks, string Wartość, T dane)
+        public void PodmieńDokument<T>(string table, FilterDefinition<T> filter, T dane)
         {
             var kolekcja = db.GetCollection<T>(table);
-            var filter = Builders<T>.Filter.Eq(Indeks, Wartość);
             kolekcja.ReplaceOne(filter, dane);
         }
 
@@ -74,6 +73,12 @@ namespace SelfHub_MongoDB
         {
             var kolekcja = db.GetCollection<T>(table);
             kolekcja.DeleteMany(filter);
+        }
+
+        public void AktualizujDokumenty<T>(string table, FilterDefinition<T> filter, UpdateDefinition<T> aktualizacja)
+        {
+            var kolekcja = db.GetCollection<T>(table);
+            kolekcja.UpdateMany(filter, aktualizacja);
         }
     }
 }

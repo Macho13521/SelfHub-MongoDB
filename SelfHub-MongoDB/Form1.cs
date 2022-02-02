@@ -63,7 +63,8 @@ namespace SelfHub_MongoDB
                 Wiek = (int)aktualizacjawieku.Value
             };
 
-            db.PodmieñDokument<U¿ytkownik>("Konta", "id", znalezioneID.Text, osoba);
+            var filter = Builders<U¿ytkownik>.Filter.Eq("id", znalezioneID.Text);
+            db.PodmieñDokument<U¿ytkownik>("Konta",filter, osoba);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -130,6 +131,14 @@ namespace SelfHub_MongoDB
             Mongo db = new Mongo("SelfHub");
             var filter = Builders<U¿ytkownik>.Filter.Eq(usunwielepol.Text, usunwielewartosci.Text);
             db.UsuñDokumenty<U¿ytkownik>("Konta",filter);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Mongo db = new Mongo("SelfHub");
+            var filter = Builders<U¿ytkownik>.Filter.Eq(szukaneaktualizacjepola.Text, szukaneaktualizacjewartosci.Text);
+            var aktualizacja = Builders<U¿ytkownik>.Update.Set(aktualizacjepolek.Text,aktualizacjewartosci.Text);
+            db.AktualizujDokumenty<U¿ytkownik>("Konta", filter, aktualizacja);
         }
     }
 }
