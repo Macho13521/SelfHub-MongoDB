@@ -25,13 +25,6 @@ namespace SelfHub_MongoDB
             kolekcja.InsertOne(dane);
         }
 
-        public T SzukajDokumentu<T>(string table, string Pole, string Wartosc)
-        {
-            var kolekcja = db.GetCollection<T>(table);
-            var filter = Builders<T>.Filter.Eq(Pole, Wartosc);
-            return kolekcja.Find(filter).First();
-        }
-
         public void UsuńDokument<T>(string table, FilterDefinition<T> filter)
         {
             var kolekcja = db.GetCollection<T>(table);

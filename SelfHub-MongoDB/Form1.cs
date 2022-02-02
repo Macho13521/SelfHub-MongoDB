@@ -29,7 +29,8 @@ namespace SelfHub_MongoDB
         private void button2_Click(object sender, EventArgs e)
         {
             Mongo db = new Mongo("SelfHub");
-            var znalezionydokument = db.SzukajDokumentu<U¿ytkownik>("Konta", szukanepole.Text, szukanawartosc.Text);
+            var filter = Builders<U¿ytkownik>.Filter.Eq(szukanepole.Text, szukanawartosc.Text);
+            var znalezionydokument = db.SzukajDokumentów<U¿ytkownik>("Konta", filter).First();
 
             znalezioneID.Text = znalezionydokument.id.ToString();
             znalezionylogin.Text = znalezionydokument.Login;
