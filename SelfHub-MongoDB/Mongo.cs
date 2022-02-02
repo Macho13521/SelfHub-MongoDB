@@ -11,7 +11,7 @@ namespace SelfHub_MongoDB
 {
     public class Mongo
     {
-        private IMongoDatabase db;
+        public IMongoDatabase db;
 
         public Mongo(string bazadanych)
         {

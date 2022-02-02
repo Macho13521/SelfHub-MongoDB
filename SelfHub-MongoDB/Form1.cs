@@ -1,5 +1,7 @@
 using MongoDB.Driver;
 using static SelfHub_MongoDB.Mongo;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace SelfHub_MongoDB
 {
@@ -8,6 +10,7 @@ namespace SelfHub_MongoDB
         public Form1()
         {
             InitializeComponent();
+            Nas³uchiwanie();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -81,6 +84,21 @@ namespace SelfHub_MongoDB
                 linijka.SubItems.Add(dokument.Wiek.ToString());
                 listadokumentow.Items.Add(linijka);
             }
+        }
+
+        private async Task Nas³uchiwanie()
+        {
+            Mongo db = new Mongo("SelfHub");
+            var kolekcja = db.db.GetCollection<U¿ytkownik>("Konta");
+
+            using (var cursor = await kolekcja.WatchAsync())
+            {
+                await cursor.ForEachAsync(change =>
+                {
+                    MessageBox.Show("aktualizacja");
+                });
+            }
+
         }
     }
 }
