@@ -18,12 +18,14 @@ namespace SelfHub_MongoDB
             Mongo db = new Mongo("SelfHub");
             U¿ytkownik osoba = new U¿ytkownik
             {
+                ID = (ObjectId)new BsonObjectId(ObjectId.GenerateNewId()),  
                 Login = dodanylogin.Text,
                 Haslo = dodanehaslo.Text, 
                 Email = dodanyemail.Text,
                 Wiek = (int)dodanywiek.Value
             };
             db.DodajDokument("Konta", osoba);
+            MessageBox.Show(osoba.ID.ToString());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace SelfHub_MongoDB
             var filter = Builders<U¿ytkownik>.Filter.Eq(szukanepole.Text, szukanawartosc.Text);
             var znalezionydokument = db.SzukajDokumentów<U¿ytkownik>("Konta", filter).First();
 
-            znalezioneID.Text = znalezionydokument.id.ToString();
+            znalezioneID.Text = znalezionydokument.ID.ToString();
             znalezionylogin.Text = znalezionydokument.Login;
             znalezionehaslo.Text = znalezionydokument.Haslo;
             znalezionywiek.Text = znalezionydokument.Wiek.ToString();
@@ -42,7 +44,7 @@ namespace SelfHub_MongoDB
         private void button3_Click(object sender, EventArgs e)
         {
             Mongo db = new Mongo("SelfHub");
-            var filter = Builders<U¿ytkownik>.Filter.Eq("id", znalezioneID.Text);
+            var filter = Builders<U¿ytkownik>.Filter.Eq("_id", (ObjectId)new BsonObjectId(ObjectId.Parse(znalezioneID.Text)));
             var aktualizacja = Builders<U¿ytkownik>.Update.Set(aktualizowanepole.Text, aktualizowanawartosc.Text);
             db.AktualizujDokumenty<U¿ytkownik>("Konta", filter, aktualizacja);
         }
@@ -50,7 +52,7 @@ namespace SelfHub_MongoDB
         private void button4_Click(object sender, EventArgs e)
         {
             Mongo db = new Mongo("SelfHub");
-            var filter = Builders<U¿ytkownik>.Filter.Eq("id", znalezioneID.Text);
+            var filter = Builders<U¿ytkownik>.Filter.Eq("_id", (ObjectId)new BsonObjectId(ObjectId.Parse(znalezioneID.Text)));
             db.UsuñDokument<U¿ytkownik>("Konta", filter);
         }
 
@@ -60,14 +62,14 @@ namespace SelfHub_MongoDB
 
             U¿ytkownik osoba = new U¿ytkownik
             {
-                id = Guid.Parse(znalezioneID.Text),
+                ID = (ObjectId)new BsonObjectId(ObjectId.Parse(znalezioneID.Text)),
                 Login = aktualizacjaloginu.Text,
                 Haslo = aktualizacjahasla.Text,
                 Email = aktualizacjaemaila.Text,
                 Wiek = (int)aktualizacjawieku.Value
             };
 
-            var filter = Builders<U¿ytkownik>.Filter.Eq("id", znalezioneID.Text);
+            var filter = Builders<U¿ytkownik>.Filter.Eq("_id", osoba.ID);
             db.PodmieñDokument<U¿ytkownik>("Konta",filter, osoba);
         }
 

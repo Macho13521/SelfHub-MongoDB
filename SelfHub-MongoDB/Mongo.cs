@@ -64,5 +64,11 @@ namespace SelfHub_MongoDB
             var kolekcja = db.GetCollection<T>(table);
             kolekcja.UpdateMany(filter, aktualizacja);
         }
+
+        //public void SzukajDokumentówPołączonych<T>(string table, FilterDefinition<T> filter)
+        //{
+        //    var kolekcja = db.GetCollection<T>(table);
+        //    kolekcja.Find(filter).ToList().ToLookup();
+        //}
     }
 }
