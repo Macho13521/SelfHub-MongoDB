@@ -41,13 +41,16 @@ namespace SelfHub_MongoDB
         private void button3_Click(object sender, EventArgs e)
         {
             Mongo db = new Mongo("SelfHub");
-            db.AktualizujDokument<U¿ytkownik>("Konta", "id", znalezioneID.Text, aktualizowanepole.Text, aktualizowanawartosc.Text);
+            var filter = Builders<U¿ytkownik>.Filter.Eq("id", znalezioneID.Text);
+            var aktualizacja = Builders<U¿ytkownik>.Update.Set(aktualizowanepole.Text, aktualizowanawartosc.Text);
+            db.AktualizujDokumenty<U¿ytkownik>("Konta", filter, aktualizacja);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Mongo db = new Mongo("SelfHub");
-            db.UsuñDokument<U¿ytkownik>("Konta", "id", znalezioneID.Text);
+            var filter = Builders<U¿ytkownik>.Filter.Eq("id", znalezioneID.Text);
+            db.UsuñDokument<U¿ytkownik>("Konta", filter);
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -32,18 +32,9 @@ namespace SelfHub_MongoDB
             return kolekcja.Find(filter).First();
         }
 
-        public void AktualizujDokument<T>(string table, string Indeks, dynamic Wartosc, string indekskolumny, dynamic wartosc2)
+        public void UsuńDokument<T>(string table, FilterDefinition<T> filter)
         {
             var kolekcja = db.GetCollection<T>(table);
-            var filter = Builders<T>.Filter.Eq(Indeks, Wartosc);
-            var aktualizacja = Builders<T>.Update.Set(indekskolumny,wartosc2);
-            kolekcja.UpdateOne(filter, aktualizacja);
-        }
-
-        public void UsuńDokument<T>(string table, string Indeks, dynamic Wartosc)
-        {
-            var kolekcja = db.GetCollection<T>(table);
-            var filter = Builders<T>.Filter.Eq(Indeks, Wartosc);
             kolekcja.DeleteOne(filter);
         }
 
