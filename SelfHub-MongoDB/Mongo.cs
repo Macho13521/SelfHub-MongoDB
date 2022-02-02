@@ -70,5 +70,10 @@ namespace SelfHub_MongoDB
             var kolekcja = db.GetCollection<T>(table);
             kolekcja.InsertMany(dokumenty);
         }
+        public void UsuńDokumenty<T>(string table, FilterDefinition<T> filter)
+        {
+            var kolekcja = db.GetCollection<T>(table);
+            kolekcja.DeleteMany(filter);
+        }
     }
 }

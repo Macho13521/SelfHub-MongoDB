@@ -124,5 +124,12 @@ namespace SelfHub_MongoDB
             dodaneemaile.Text = "";
             dodanewieki.Text = "";
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Mongo db = new Mongo("SelfHub");
+            var filter = Builders<U¿ytkownik>.Filter.Eq(usunwielepol.Text, usunwielewartosci.Text);
+            db.UsuñDokumenty<U¿ytkownik>("Konta",filter);
+        }
     }
 }

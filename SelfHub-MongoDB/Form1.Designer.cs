@@ -78,6 +78,11 @@
             this.dodanehasla = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.usunwielepol = new System.Windows.Forms.TextBox();
+            this.usunwielewartosci = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dodanywiek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aktualizacjawieku)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodanewieki)).BeginInit();
@@ -494,11 +499,58 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // usunwielepol
+            // 
+            this.usunwielepol.Location = new System.Drawing.Point(653, 346);
+            this.usunwielepol.Name = "usunwielepol";
+            this.usunwielepol.Size = new System.Drawing.Size(100, 23);
+            this.usunwielepol.TabIndex = 54;
+            // 
+            // usunwielewartosci
+            // 
+            this.usunwielewartosci.Location = new System.Drawing.Point(759, 346);
+            this.usunwielewartosci.Name = "usunwielewartosci";
+            this.usunwielewartosci.Size = new System.Drawing.Size(100, 23);
+            this.usunwielewartosci.TabIndex = 55;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(722, 375);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 56;
+            this.button9.Text = "UsuńWiele";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(786, 324);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(50, 15);
+            this.label15.TabIndex = 58;
+            this.label15.Text = "Wartość";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(687, 324);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 15);
+            this.label16.TabIndex = 57;
+            this.label16.Text = "Pole";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 627);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.usunwielewartosci);
+            this.Controls.Add(this.usunwielepol);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.dodanewieki);
             this.Controls.Add(this.label11);
@@ -607,5 +659,10 @@
         private TextBox dodanehasla;
         private Button button7;
         private Button button8;
+        private TextBox usunwielepol;
+        private TextBox usunwielewartosci;
+        private Button button9;
+        private Label label15;
+        private Label label16;
     }
 }
