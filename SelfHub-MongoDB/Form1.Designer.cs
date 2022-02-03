@@ -94,9 +94,19 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.kolejnyprzedmiot = new System.Windows.Forms.TextBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.kolejnaocena = new System.Windows.Forms.NumericUpDown();
+            this.szukanyprzedmiot = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.znalezionaocena = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dodanywiek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aktualizacjawieku)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodanewieki)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolejnaocena)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -175,14 +185,14 @@
             // 
             // szukanepole
             // 
-            this.szukanepole.Location = new System.Drawing.Point(328, 39);
+            this.szukanepole.Location = new System.Drawing.Point(308, 68);
             this.szukanepole.Name = "szukanepole";
             this.szukanepole.Size = new System.Drawing.Size(100, 23);
             this.szukanepole.TabIndex = 10;
             // 
             // szukanawartosc
             // 
-            this.szukanawartosc.Location = new System.Drawing.Point(445, 39);
+            this.szukanawartosc.Location = new System.Drawing.Point(425, 68);
             this.szukanawartosc.Name = "szukanawartosc";
             this.szukanawartosc.Size = new System.Drawing.Size(100, 23);
             this.szukanawartosc.TabIndex = 11;
@@ -190,7 +200,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(356, 15);
+            this.label5.Location = new System.Drawing.Point(336, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 15);
             this.label5.TabIndex = 12;
@@ -199,7 +209,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(473, 15);
+            this.label6.Location = new System.Drawing.Point(453, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 15);
             this.label6.TabIndex = 13;
@@ -207,7 +217,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(398, 68);
+            this.button2.Location = new System.Drawing.Point(378, 97);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 14;
@@ -218,7 +228,7 @@
             // znalezioneID
             // 
             this.znalezioneID.AutoSize = true;
-            this.znalezioneID.Location = new System.Drawing.Point(575, 9);
+            this.znalezioneID.Location = new System.Drawing.Point(604, 36);
             this.znalezioneID.Name = "znalezioneID";
             this.znalezioneID.Size = new System.Drawing.Size(18, 15);
             this.znalezioneID.TabIndex = 15;
@@ -226,14 +236,14 @@
             // 
             // aktualizowanepole
             // 
-            this.aktualizowanepole.Location = new System.Drawing.Point(535, 201);
+            this.aktualizowanepole.Location = new System.Drawing.Point(534, 263);
             this.aktualizowanepole.Name = "aktualizowanepole";
             this.aktualizowanepole.Size = new System.Drawing.Size(100, 23);
             this.aktualizowanepole.TabIndex = 16;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(603, 241);
+            this.button3.Location = new System.Drawing.Point(602, 303);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 24;
@@ -243,7 +253,7 @@
             // 
             // aktualizowanawartosc
             // 
-            this.aktualizowanawartosc.Location = new System.Drawing.Point(641, 201);
+            this.aktualizowanawartosc.Location = new System.Drawing.Point(640, 263);
             this.aktualizowanawartosc.Name = "aktualizowanawartosc";
             this.aktualizowanawartosc.Size = new System.Drawing.Size(100, 23);
             this.aktualizowanawartosc.TabIndex = 25;
@@ -251,7 +261,7 @@
             // znalezionylogin
             // 
             this.znalezionylogin.AutoSize = true;
-            this.znalezionylogin.Location = new System.Drawing.Point(575, 39);
+            this.znalezionylogin.Location = new System.Drawing.Point(604, 66);
             this.znalezionylogin.Name = "znalezionylogin";
             this.znalezionylogin.Size = new System.Drawing.Size(38, 15);
             this.znalezionylogin.TabIndex = 26;
@@ -260,7 +270,7 @@
             // znalezionehaslo
             // 
             this.znalezionehaslo.AutoSize = true;
-            this.znalezionehaslo.Location = new System.Drawing.Point(575, 62);
+            this.znalezionehaslo.Location = new System.Drawing.Point(604, 89);
             this.znalezionehaslo.Name = "znalezionehaslo";
             this.znalezionehaslo.Size = new System.Drawing.Size(38, 15);
             this.znalezionehaslo.TabIndex = 27;
@@ -269,7 +279,7 @@
             // znalezionyemail
             // 
             this.znalezionyemail.AutoSize = true;
-            this.znalezionyemail.Location = new System.Drawing.Point(575, 86);
+            this.znalezionyemail.Location = new System.Drawing.Point(604, 113);
             this.znalezionyemail.Name = "znalezionyemail";
             this.znalezionyemail.Size = new System.Drawing.Size(38, 15);
             this.znalezionyemail.TabIndex = 28;
@@ -278,7 +288,7 @@
             // znalezionywiek
             // 
             this.znalezionywiek.AutoSize = true;
-            this.znalezionywiek.Location = new System.Drawing.Point(575, 114);
+            this.znalezionywiek.Location = new System.Drawing.Point(604, 141);
             this.znalezionywiek.Name = "znalezionywiek";
             this.znalezionywiek.Size = new System.Drawing.Size(38, 15);
             this.znalezionywiek.TabIndex = 29;
@@ -286,7 +296,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(613, 140);
+            this.button4.Location = new System.Drawing.Point(642, 167);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 30;
@@ -375,7 +385,7 @@
             this.Haslo,
             this.Email,
             this.Wiek});
-            this.listadokumentow.Location = new System.Drawing.Point(398, 460);
+            this.listadokumentow.Location = new System.Drawing.Point(235, 481);
             this.listadokumentow.Name = "listadokumentow";
             this.listadokumentow.Size = new System.Drawing.Size(482, 134);
             this.listadokumentow.TabIndex = 40;
@@ -404,14 +414,15 @@
             // 
             // wartosciszukane
             // 
-            this.wartosciszukane.Location = new System.Drawing.Point(286, 502);
+            this.wartosciszukane.Location = new System.Drawing.Point(121, 527);
             this.wartosciszukane.Name = "wartosciszukane";
             this.wartosciszukane.Size = new System.Drawing.Size(100, 23);
             this.wartosciszukane.TabIndex = 41;
+            this.wartosciszukane.TextChanged += new System.EventHandler(this.wartosciszukane_TextChanged);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(247, 531);
+            this.button6.Location = new System.Drawing.Point(82, 556);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 42;
@@ -421,14 +432,15 @@
             // 
             // poleszukane
             // 
-            this.poleszukane.Location = new System.Drawing.Point(180, 502);
+            this.poleszukane.Location = new System.Drawing.Point(15, 527);
             this.poleszukane.Name = "poleszukane";
             this.poleszukane.Size = new System.Drawing.Size(100, 23);
             this.poleszukane.TabIndex = 43;
+            this.poleszukane.TextChanged += new System.EventHandler(this.poleszukane_TextChanged);
             // 
             // dodanewieki
             // 
-            this.dodanewieki.Location = new System.Drawing.Point(389, 285);
+            this.dodanewieki.Location = new System.Drawing.Point(372, 289);
             this.dodanewieki.Name = "dodanewieki";
             this.dodanewieki.Size = new System.Drawing.Size(100, 23);
             this.dodanewieki.TabIndex = 52;
@@ -436,7 +448,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(309, 330);
+            this.label11.Location = new System.Drawing.Point(292, 334);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 15);
             this.label11.TabIndex = 51;
@@ -444,7 +456,7 @@
             // 
             // dodaneemaile
             // 
-            this.dodaneemaile.Location = new System.Drawing.Point(389, 327);
+            this.dodaneemaile.Location = new System.Drawing.Point(372, 331);
             this.dodaneemaile.Name = "dodaneemaile";
             this.dodaneemaile.Size = new System.Drawing.Size(100, 23);
             this.dodaneemaile.TabIndex = 50;
@@ -452,7 +464,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(309, 285);
+            this.label12.Location = new System.Drawing.Point(292, 289);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(36, 15);
             this.label12.TabIndex = 49;
@@ -461,7 +473,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(309, 247);
+            this.label13.Location = new System.Drawing.Point(292, 251);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 15);
             this.label13.TabIndex = 48;
@@ -470,7 +482,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(309, 205);
+            this.label14.Location = new System.Drawing.Point(292, 209);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(37, 15);
             this.label14.TabIndex = 47;
@@ -478,21 +490,21 @@
             // 
             // dodaneloginy
             // 
-            this.dodaneloginy.Location = new System.Drawing.Point(389, 202);
+            this.dodaneloginy.Location = new System.Drawing.Point(372, 206);
             this.dodaneloginy.Name = "dodaneloginy";
             this.dodaneloginy.Size = new System.Drawing.Size(100, 23);
             this.dodaneloginy.TabIndex = 46;
             // 
             // dodanehasla
             // 
-            this.dodanehasla.Location = new System.Drawing.Point(389, 244);
+            this.dodanehasla.Location = new System.Drawing.Point(372, 248);
             this.dodanehasla.Name = "dodanehasla";
             this.dodanehasla.Size = new System.Drawing.Size(100, 23);
             this.dodanehasla.TabIndex = 45;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(309, 361);
+            this.button7.Location = new System.Drawing.Point(292, 365);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 23);
             this.button7.TabIndex = 44;
@@ -502,7 +514,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(415, 361);
+            this.button8.Location = new System.Drawing.Point(398, 365);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 53;
@@ -512,21 +524,21 @@
             // 
             // usunwielepol
             // 
-            this.usunwielepol.Location = new System.Drawing.Point(653, 346);
+            this.usunwielepol.Location = new System.Drawing.Point(534, 377);
             this.usunwielepol.Name = "usunwielepol";
             this.usunwielepol.Size = new System.Drawing.Size(100, 23);
             this.usunwielepol.TabIndex = 54;
             // 
             // usunwielewartosci
             // 
-            this.usunwielewartosci.Location = new System.Drawing.Point(759, 346);
+            this.usunwielewartosci.Location = new System.Drawing.Point(640, 377);
             this.usunwielewartosci.Name = "usunwielewartosci";
             this.usunwielewartosci.Size = new System.Drawing.Size(100, 23);
             this.usunwielewartosci.TabIndex = 55;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(722, 375);
+            this.button9.Location = new System.Drawing.Point(603, 406);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 56;
@@ -537,7 +549,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(786, 324);
+            this.label15.Location = new System.Drawing.Point(667, 355);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 15);
             this.label15.TabIndex = 58;
@@ -546,7 +558,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(687, 324);
+            this.label16.Location = new System.Drawing.Point(568, 355);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(30, 15);
             this.label16.TabIndex = 57;
@@ -554,14 +566,14 @@
             // 
             // szukaneaktualizacjewartosci
             // 
-            this.szukaneaktualizacjewartosci.Location = new System.Drawing.Point(932, 26);
+            this.szukaneaktualizacjewartosci.Location = new System.Drawing.Point(934, 495);
             this.szukaneaktualizacjewartosci.Name = "szukaneaktualizacjewartosci";
             this.szukaneaktualizacjewartosci.Size = new System.Drawing.Size(100, 23);
             this.szukaneaktualizacjewartosci.TabIndex = 61;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(879, 114);
+            this.button10.Location = new System.Drawing.Point(881, 583);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(101, 23);
             this.button10.TabIndex = 60;
@@ -571,21 +583,21 @@
             // 
             // szukaneaktualizacjepola
             // 
-            this.szukaneaktualizacjepola.Location = new System.Drawing.Point(826, 26);
+            this.szukaneaktualizacjepola.Location = new System.Drawing.Point(828, 495);
             this.szukaneaktualizacjepola.Name = "szukaneaktualizacjepola";
             this.szukaneaktualizacjepola.Size = new System.Drawing.Size(100, 23);
             this.szukaneaktualizacjepola.TabIndex = 59;
             // 
             // aktualizacjewartosci
             // 
-            this.aktualizacjewartosci.Location = new System.Drawing.Point(932, 83);
+            this.aktualizacjewartosci.Location = new System.Drawing.Point(934, 552);
             this.aktualizacjewartosci.Name = "aktualizacjewartosci";
             this.aktualizacjewartosci.Size = new System.Drawing.Size(100, 23);
             this.aktualizacjewartosci.TabIndex = 63;
             // 
             // aktualizacjepolek
             // 
-            this.aktualizacjepolek.Location = new System.Drawing.Point(826, 83);
+            this.aktualizacjepolek.Location = new System.Drawing.Point(828, 552);
             this.aktualizacjepolek.Name = "aktualizacjepolek";
             this.aktualizacjepolek.Size = new System.Drawing.Size(100, 23);
             this.aktualizacjepolek.TabIndex = 62;
@@ -593,7 +605,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(961, 8);
+            this.label17.Location = new System.Drawing.Point(963, 477);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(50, 15);
             this.label17.TabIndex = 65;
@@ -602,7 +614,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(860, 8);
+            this.label18.Location = new System.Drawing.Point(862, 477);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(30, 15);
             this.label18.TabIndex = 64;
@@ -611,7 +623,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(961, 65);
+            this.label19.Location = new System.Drawing.Point(963, 534);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(50, 15);
             this.label19.TabIndex = 67;
@@ -620,7 +632,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(860, 65);
+            this.label20.Location = new System.Drawing.Point(862, 534);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(30, 15);
             this.label20.TabIndex = 66;
@@ -629,7 +641,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(770, 29);
+            this.label21.Location = new System.Drawing.Point(772, 498);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(50, 15);
             this.label21.TabIndex = 68;
@@ -638,17 +650,103 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(750, 86);
+            this.label22.Location = new System.Drawing.Point(752, 555);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(70, 15);
             this.label22.TabIndex = 69;
             this.label22.Text = "Aktualizacja";
             // 
+            // kolejnyprzedmiot
+            // 
+            this.kolejnyprzedmiot.Location = new System.Drawing.Point(849, 64);
+            this.kolejnyprzedmiot.Name = "kolejnyprzedmiot";
+            this.kolejnyprzedmiot.Size = new System.Drawing.Size(100, 23);
+            this.kolejnyprzedmiot.TabIndex = 80;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(849, 151);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(98, 23);
+            this.button13.TabIndex = 82;
+            this.button13.Text = "DodajdoListy";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(782, 67);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(61, 15);
+            this.label25.TabIndex = 83;
+            this.label25.Text = "Przedmiot";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(792, 109);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(41, 15);
+            this.label26.TabIndex = 84;
+            this.label26.Text = "Ocena";
+            // 
+            // kolejnaocena
+            // 
+            this.kolejnaocena.Location = new System.Drawing.Point(849, 107);
+            this.kolejnaocena.Name = "kolejnaocena";
+            this.kolejnaocena.Size = new System.Drawing.Size(100, 23);
+            this.kolejnaocena.TabIndex = 85;
+            // 
+            // szukanyprzedmiot
+            // 
+            this.szukanyprzedmiot.Location = new System.Drawing.Point(903, 236);
+            this.szukanyprzedmiot.Name = "szukanyprzedmiot";
+            this.szukanyprzedmiot.Size = new System.Drawing.Size(100, 23);
+            this.szukanyprzedmiot.TabIndex = 86;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(809, 235);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(88, 23);
+            this.button11.TabIndex = 87;
+            this.button11.Text = "SzukajOceny";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(921, 218);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(61, 15);
+            this.label23.TabIndex = 88;
+            this.label23.Text = "Przedmiot";
+            // 
+            // znalezionaocena
+            // 
+            this.znalezionaocena.AutoSize = true;
+            this.znalezionaocena.Location = new System.Drawing.Point(881, 271);
+            this.znalezionaocena.Name = "znalezionaocena";
+            this.znalezionaocena.Size = new System.Drawing.Size(30, 15);
+            this.znalezionaocena.TabIndex = 89;
+            this.znalezionaocena.Text = "Brak";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 627);
+            this.ClientSize = new System.Drawing.Size(1078, 627);
+            this.Controls.Add(this.znalezionaocena);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.szukanyprzedmiot);
+            this.Controls.Add(this.kolejnaocena);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.kolejnyprzedmiot);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label19);
@@ -716,6 +814,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dodanywiek)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aktualizacjawieku)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodanewieki)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolejnaocena)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,5 +888,14 @@
         private Label label20;
         private Label label21;
         private Label label22;
+        private TextBox kolejnyprzedmiot;
+        private Button button13;
+        private Label label25;
+        private Label label26;
+        private NumericUpDown kolejnaocena;
+        private TextBox szukanyprzedmiot;
+        private Button button11;
+        private Label label23;
+        private Label znalezionaocena;
     }
 }

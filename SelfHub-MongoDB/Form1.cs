@@ -16,16 +16,18 @@ namespace SelfHub_MongoDB
         private void button1_Click(object sender, EventArgs e)
         {
             Mongo db = new Mongo("SelfHub");
+
             U¿ytkownik osoba = new U¿ytkownik
             {
                 ID = (ObjectId)new BsonObjectId(ObjectId.GenerateNewId()),  
                 Login = dodanylogin.Text,
                 Haslo = dodanehaslo.Text, 
                 Email = dodanyemail.Text,
-                Wiek = (int)dodanywiek.Value
+                Wiek = (int)dodanywiek.Value,
+                Oceny = new List<Oceny>()
             };
+            
             db.DodajDokument("Konta", osoba);
-            MessageBox.Show(osoba.ID.ToString());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -145,6 +147,39 @@ namespace SelfHub_MongoDB
             var filter = Builders<U¿ytkownik>.Filter.Eq(szukaneaktualizacjepola.Text, szukaneaktualizacjewartosci.Text);
             var aktualizacja = Builders<U¿ytkownik>.Update.Set(aktualizacjepolek.Text,aktualizacjewartosci.Text);
             db.AktualizujDokumenty<U¿ytkownik>("Konta", filter, aktualizacja);
+        }
+
+        private void poleszukane_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wartosciszukane_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Oceny Ocenka = new Oceny
+            {
+                ID = (ObjectId)new BsonObjectId(ObjectId.GenerateNewId()),
+                Przedmiot = kolejnyprzedmiot.Text,
+                Ocena = (int)kolejnaocena.Value
+            };
+            Mongo db = new Mongo("SelfHub");
+            var filter = Builders<U¿ytkownik>.Filter.Eq("_id", (ObjectId)new BsonObjectId(ObjectId.Parse(znalezioneID.Text)));
+            var aktualizacja = Builders<U¿ytkownik>.Update.AddToSet("Oceny",Ocenka);
+            db.AktualizujDokumenty<U¿ytkownik>("Konta", filter, aktualizacja);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Mongo db = new Mongo("SelfHub");
+            var filter = Builders<U¿ytkownik>.Filter.Eq("_id", (ObjectId)new BsonObjectId(ObjectId.Parse(znalezioneID.Text)));
+            var dokument = db.SzukajDokumentów<U¿ytkownik>("Konta", filter).First();
+
+            znalezionaocena.Text = dokument.Oceny.Find(x => x.Przedmiot.Contains(szukanyprzedmiot.Text)).Ocena.ToString();
         }
     }
 }
