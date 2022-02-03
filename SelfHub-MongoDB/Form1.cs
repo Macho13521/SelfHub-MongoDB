@@ -2,6 +2,7 @@ using MongoDB.Driver;
 using static SelfHub_MongoDB.Mongo;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Linq;
 
 namespace SelfHub_MongoDB
 {
@@ -187,12 +188,11 @@ namespace SelfHub_MongoDB
         {
             Mongo db = new Mongo("SelfHub");
             var filter = Builders<U¿ytkownik>.Filter.Eq("_id", (ObjectId)new BsonObjectId(ObjectId.Parse(znalezioneID.Text)));
-            var dokument = db.SzukajDokumentów<U¿ytkownik>("Konta", filter).First();
+            var dokument = db.SzukajDokumentów<U¿ytkownik>("Konta", filter).First().Oceny;
 
-            var cuœ = dokument.Oceny.Find(x => x.ID.ToString().Contains(idoceny.Text));
-            dokument.Oceny.Remove(cuœ);
+            dokument.Remove(dokument.Find(x => x.ID.ToString().Contains(idoceny.Text)));
 
-            var aktualizacja = Builders<U¿ytkownik>.Update.Set("Oceny", dokument.Oceny);
+            var aktualizacja = Builders<U¿ytkownik>.Update.Set("Oceny", dokument);
             db.AktualizujDokumenty<U¿ytkownik>("Konta", filter, aktualizacja);
         }
     }
