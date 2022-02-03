@@ -180,6 +180,20 @@ namespace SelfHub_MongoDB
             var dokument = db.SzukajDokumentów<U¿ytkownik>("Konta", filter).First();
 
             znalezionaocena.Text = dokument.Oceny.Find(x => x.Przedmiot.Contains(szukanyprzedmiot.Text)).Ocena.ToString();
+            idoceny.Text = dokument.Oceny.Find(x => x.Przedmiot.Contains(szukanyprzedmiot.Text)).ID.ToString();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Mongo db = new Mongo("SelfHub");
+            var filter = Builders<U¿ytkownik>.Filter.Eq("_id", (ObjectId)new BsonObjectId(ObjectId.Parse(znalezioneID.Text)));
+            var dokument = db.SzukajDokumentów<U¿ytkownik>("Konta", filter).First();
+
+            var cuœ = dokument.Oceny.Find(x => x.ID.ToString().Contains(idoceny.Text));
+            dokument.Oceny.Remove(cuœ);
+
+            var aktualizacja = Builders<U¿ytkownik>.Update.Set("Oceny", dokument.Oceny);
+            db.AktualizujDokumenty<U¿ytkownik>("Konta", filter, aktualizacja);
         }
     }
 }

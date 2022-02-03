@@ -103,6 +103,8 @@
             this.button11 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.znalezionaocena = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.idoceny = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dodanywiek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aktualizacjawieku)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodanewieki)).BeginInit();
@@ -727,17 +729,38 @@
             // znalezionaocena
             // 
             this.znalezionaocena.AutoSize = true;
-            this.znalezionaocena.Location = new System.Drawing.Point(881, 271);
+            this.znalezionaocena.Location = new System.Drawing.Point(881, 262);
             this.znalezionaocena.Name = "znalezionaocena";
             this.znalezionaocena.Size = new System.Drawing.Size(30, 15);
             this.znalezionaocena.TabIndex = 89;
             this.znalezionaocena.Text = "Brak";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(837, 295);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(112, 23);
+            this.button12.TabIndex = 90;
+            this.button12.Text = "UsuńElementListy";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // idoceny
+            // 
+            this.idoceny.AutoSize = true;
+            this.idoceny.Location = new System.Drawing.Point(881, 277);
+            this.idoceny.Name = "idoceny";
+            this.idoceny.Size = new System.Drawing.Size(30, 15);
+            this.idoceny.TabIndex = 93;
+            this.idoceny.Text = "Brak";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 627);
+            this.Controls.Add(this.idoceny);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.znalezionaocena);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.button11);
@@ -897,5 +920,7 @@
         private Button button11;
         private Label label23;
         private Label znalezionaocena;
+        private Button button12;
+        private Label idoceny;
     }
 }
