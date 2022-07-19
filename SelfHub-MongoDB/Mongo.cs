@@ -15,7 +15,7 @@ namespace SelfHub_MongoDB
 
         public Mongo(string bazadanych)
         {
-            var klient = new MongoClient("mongodb+srv://Apeczka:e9EnsODP1IZatvlM@cluster0.g3xgg.mongodb.net/test");
+            var klient = new MongoClient("");
             db = klient.GetDatabase(bazadanych);
         }
 
